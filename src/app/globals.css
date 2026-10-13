@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0F172A;
+  --color-primary: #0f172a;
+  --color-accent: #06b6d4;
+  --color-muted: #475569;
+  --color-divider: #f1f5f9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-muted: var(--color-muted);
+  --color-divider: var(--color-divider);
+  --font-sans: var(--font-jakarta);
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 400;
+}
+
+h1 { 
+  font-weight: 600; 
+  letter-spacing: -0.025em; 
+}
+h2 { 
+  font-weight: 600; 
+  letter-spacing: -0.02em; 
+}
+h3 { 
+  font-weight: 600; 
+  letter-spacing: -0.015em; 
+}
+h4, h5, h6 { 
+  font-weight: 500; 
+}
+
+[href^="tel:"], 
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbars for horizontal containers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
