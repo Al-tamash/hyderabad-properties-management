@@ -2,9 +2,9 @@ import { buildMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/site-config";
 
 export const metadata = buildMetadata({
-  title: "Terms of Use | Hyderabad Properties Management",
+  title: "Terms of Use | Hyderabad Properties Management Website",
   description:
-    "The terms that apply when you use the Hyderabad Properties Management website, including content accuracy, enquiries, liability and governing law.",
+    "The terms that apply when you use the Hyderabad Properties Management website, covering content accuracy, enquiries, liability and governing law in India.",
   path: "/terms",
 });
 

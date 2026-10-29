@@ -2,7 +2,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/site-config";
 
 export const metadata = buildMetadata({
-  title: "Privacy Policy | Hyderabad Properties Management",
+  title: "Privacy Policy | Hyderabad Properties Management (HPM)",
   description:
     "How Hyderabad Properties Management handles the details you share through our website, WhatsApp and email enquiries, and what we never do with your data.",
   path: "/privacy",

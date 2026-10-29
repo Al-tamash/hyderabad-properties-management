@@ -34,7 +34,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-semibold text-lg mb-6 text-[var(--color-accent)] h-10 flex items-center">Services</h3>
+          <h2 className="font-semibold text-lg mb-6 text-[var(--color-accent)] h-10 flex items-center">Services</h2>
           <ul className="flex flex-col gap-1 text-gray-400 text-sm">
             <li><Link href="/services/flat-management" className={linkClass}>Flat Management</Link></li>
             <li><Link href="/services/apartment-management" className={linkClass}>Apartment Management</Link></li>
@@ -45,7 +45,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-semibold text-lg mb-6 text-[var(--color-accent)] h-10 flex items-center">Company</h3>
+          <h2 className="font-semibold text-lg mb-6 text-[var(--color-accent)] h-10 flex items-center">Company</h2>
           <ul className="flex flex-col gap-1 text-gray-400 text-sm">
             <li><Link href="/about" className={linkClass}>About Us</Link></li>
             <li><Link href="/contact" className={linkClass}>Contact</Link></li>
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-semibold text-lg mb-6 text-[var(--color-accent)] h-10 flex items-center">Contact</h3>
+          <h2 className="font-semibold text-lg mb-6 text-[var(--color-accent)] h-10 flex items-center">Contact</h2>
           <ul className="flex flex-col gap-1 text-gray-400 text-sm">
             <li>
               <a href={`tel:${siteConfig.contact.phone}`} className={`${linkClass} tabular-nums`}>

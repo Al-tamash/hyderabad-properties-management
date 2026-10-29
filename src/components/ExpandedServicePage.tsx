@@ -117,7 +117,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
                 {data.overviewDescription.map((p, i) => <p key={i}>{p}</p>)}
               </div>
               <Link href="/about" className="inline-flex bg-[var(--color-accent-strong)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--color-primary)] transition-colors items-center shadow-md">
-                Read More <ArrowRight className="w-4 h-4 ml-2" />
+                Learn About Our Team <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
               </Link>
 
 

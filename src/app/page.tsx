@@ -121,7 +121,7 @@ export default function HomePage() {
             <h1 className="hero-text text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8 drop-shadow-lg">
               Your Assets, Our Care
             </h1>
-            <div className="hero-text flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <a href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`} className="bg-[var(--color-accent-strong)] hover:bg-[var(--color-primary)] text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:-translate-y-1">
                 Call Now
               </a>
