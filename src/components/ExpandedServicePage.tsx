@@ -6,9 +6,8 @@ import Link from "next/link";
 import { siteConfig } from "@/site-config";
 import {
   ArrowRight, CheckCircle2, ChevronDown,
-  Phone, Star, ShieldCheck, MapPin, Wrench, FileText
+  Star
 } from "lucide-react";
-import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export interface ServiceData {
   id: string;
@@ -19,7 +18,7 @@ export interface ServiceData {
   overviewDescription: string[];
   overviewImage: string;
   keyInclusions: string[];
-  whatWeHandle: { title: string; desc: string; icon: any }[];
+  whatWeHandle: { title: string; desc: string; icon: React.ReactNode }[];
   howItWorks: { step: number; title: string; desc: string }[];
   gallery: string[];
   reviews: { quote: string; name: string; location: string }[];
@@ -59,7 +58,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
               </p>
               
               <div className="flex flex-wrap items-center gap-6">
-                <a href={`tel:${siteConfig.contact.phone}`} className="bg-[var(--color-accent)] text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition-colors shadow-lg shadow-cyan-500/20">
+                <a href={`tel:${siteConfig.contact.phone}`} className="bg-[var(--color-accent-strong)] text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition-colors shadow-lg shadow-cyan-500/20">
                   Inquire Now
                 </a>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white font-medium hover:text-[var(--color-accent)] transition-colors group">
@@ -97,13 +96,13 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
             {/* Left Side Bento Grid Images */}
             <div className="w-full lg:w-1/2 relative h-[400px] md:h-[500px]">
               <div className="absolute left-0 top-0 w-[55%] h-[45%] rounded-2xl overflow-hidden shadow-lg border-4 border-white z-10 bg-gray-100">
-                <img src={data.gallery[1] || data.overviewImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Managed property detail" loading="lazy" decoding="async" />
+                <Image src={data.gallery[1] || data.overviewImage} alt="Managed property detail" width={800} height={600} sizes="(max-width: 1024px) 50vw, 280px" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="absolute left-0 bottom-[5%] w-[65%] h-[45%] rounded-2xl overflow-hidden shadow-lg border-4 border-white z-20 bg-gray-100">
-                <img src={data.gallery[2] || data.heroImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Managed property interior" loading="lazy" decoding="async" />
+                <Image src={data.gallery[2] || data.heroImage} alt="Managed property interior" width={800} height={600} sizes="(max-width: 1024px) 50vw, 320px" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="absolute right-0 top-[25%] w-[55%] h-[55%] rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-30 bg-gray-100">
-                <img src={data.gallery[3] || data.overviewImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Managed property exterior" loading="lazy" decoding="async" />
+                <Image src={data.gallery[3] || data.overviewImage} alt="Managed property exterior" width={800} height={600} sizes="(max-width: 1024px) 50vw, 280px" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
 
@@ -111,13 +110,13 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
             <div className="w-full lg:w-1/2">
               <div className="flex items-center gap-4 mb-4">
                 <span className="text-gray-600 font-bold tracking-wider text-sm uppercase">About Us</span>
-                <div className="w-12 h-[2px] bg-cyan-500"></div>
+                <div className="w-12 h-[2px] bg-[var(--color-accent-strong)]"></div>
               </div>
               <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-gray-900 leading-[1.2]">{data.overviewHeading}</h2>
               <div className="space-y-4 text-gray-500 leading-relaxed mb-8">
                 {data.overviewDescription.map((p, i) => <p key={i}>{p}</p>)}
               </div>
-              <Link href="/about" className="inline-flex bg-cyan-500 text-white px-8 py-3 rounded-full font-bold hover:bg-cyan-400 transition-colors items-center shadow-md">
+              <Link href="/about" className="inline-flex bg-[var(--color-accent-strong)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--color-primary)] transition-colors items-center shadow-md">
                 Read More <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
 
@@ -152,7 +151,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
             <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {data.gallery.map((img, i) => (
                 <div key={i} className="w-[280px] h-[200px] md:w-[320px] md:h-[240px] rounded-2xl overflow-hidden shadow-sm shrink-0 snap-start group relative">
-                  <img src={img} alt={`${data.title} gallery image ${i + 1}`} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                  <Image src={img} alt={`${data.title} gallery image ${i + 1}`} width={800} height={600} sizes="(max-width: 768px) 80vw, 320px" className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
                 </div>
               ))}
@@ -173,7 +172,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
             {data.reviews.map((review, i) => (
               <div key={i} className="w-[85vw] md:w-auto shrink-0 snap-center bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col h-full">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-cyan-500 text-white flex items-center justify-center font-semibold shrink-0 shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-[var(--color-accent-strong)] text-white flex items-center justify-center font-semibold shrink-0 shadow-sm">
                     {review.name.charAt(0)}
                   </div>
                   <div>
@@ -183,8 +182,8 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
                     </div>
                   </div>
                 </div>
-                <p className="text-[var(--color-muted)] text-sm italic leading-relaxed">"{review.quote}"</p>
-                <div className="mt-auto pt-4 text-xs text-gray-400 font-medium">{review.location}</div>
+                <p className="text-[var(--color-muted)] text-sm italic leading-relaxed">&ldquo;{review.quote}&rdquo;</p>
+                <div className="mt-auto pt-4 text-xs text-gray-600 font-medium">{review.location}</div>
               </div>
             ))}
           </div>
@@ -204,7 +203,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
           <div className="flex overflow-x-auto gap-8 pb-12 pt-4 snap-x snap-mandatory w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {data.howItWorks.map((step, i) => (
               <div key={i} className="min-w-[280px] md:min-w-[320px] bg-white rounded-[2rem] p-8 flex flex-col text-left shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group shrink-0 snap-center">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-8 shadow-lg bg-cyan-500 shadow-cyan-500/40 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-8 shadow-lg bg-[var(--color-accent-strong)] shadow-cyan-500/40 group-hover:scale-110 transition-transform">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900 tracking-tight font-serif">{step.title}</h3>
@@ -230,19 +229,32 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
                   key={i}
                   className={`bg-white rounded-[2rem] shadow-sm overflow-hidden transition-all duration-300 border ${isOpen ? 'border-cyan-500 ring-2 ring-cyan-100' : 'border-gray-200 hover:border-cyan-300'}`}
                 >
-                  <div
-                    className="flex items-center justify-between p-6 cursor-pointer"
-                    onClick={() => setOpenFaq(isOpen ? null : i)}
-                  >
-                    <h3 className="text-lg font-bold text-gray-900 pr-8">
-                      {faq.question}
-                    </h3>
-                    <div className={`w-10 h-10 bg-cyan-50 text-cyan-600 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-cyan-500 text-white' : ''}`}>
-                      <ChevronDown className="w-5 h-5" />
-                    </div>
-                  </div>
+                  <h3 className="m-0">
+                    <button
+                      type="button"
+                      id={`service-faq-button-${i}`}
+                      aria-expanded={isOpen}
+                      aria-controls={`service-faq-panel-${i}`}
+                      onClick={() => setOpenFaq(isOpen ? null : i)}
+                      className="flex w-full items-center justify-between p-6 text-left"
+                    >
+                      <span className="text-lg font-bold text-gray-900 pr-8">
+                        {faq.question}
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className={`w-10 h-10 bg-cyan-50 text-[var(--color-accent-strong)] rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[var(--color-accent-strong)] text-white' : ''}`}
+                      >
+                        <ChevronDown className="w-5 h-5" />
+                      </span>
+                    </button>
+                  </h3>
 
                   <div
+                    id={`service-faq-panel-${i}`}
+                    role="region"
+                    aria-labelledby={`service-faq-button-${i}`}
+                    aria-hidden={!isOpen}
                     className={`px-6 text-gray-600 leading-relaxed transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 pb-0 opacity-0'}`}
                   >
                     {faq.answer}
@@ -276,7 +288,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
             {/* Right Content */}
             <div className="lg:w-2/5 flex flex-col items-start lg:items-end w-full z-10 relative">
               <div className="flex flex-col sm:flex-row gap-4 w-full justify-start lg:justify-end mb-8">
-                <a href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`} className="bg-cyan-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-cyan-400 transition-colors flex items-center justify-center gap-2 shadow-lg">
+                <a href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`} className="bg-[var(--color-accent-strong)] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[var(--color-primary)] transition-colors flex items-center justify-center gap-2 shadow-lg">
                   Contact Us <ArrowRight className="w-5 h-5" />
                 </a>
                 <a href={`https://wa.me/${siteConfig.contact.whatsappNumber}`} className="bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
@@ -286,10 +298,10 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
               
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-3">
-                  <img src="/images/flat.jpg" alt="Property" className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] object-cover z-30 relative" />
-                  <img src="/images/apartment.jpg" alt="Property" className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] object-cover z-20 relative" />
-                  <img src="/images/villa.jpg" alt="Property" className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] object-cover z-10 relative" />
-                  <div className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] bg-cyan-500 flex items-center justify-center text-xs font-bold text-white z-0 relative">
+                  <Image src="/images/flat.jpg" alt="Property" width={40} height={40} sizes="40px" className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] object-cover z-30 relative" />
+                  <Image src="/images/apartment.jpg" alt="Property" width={40} height={40} sizes="40px" className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] object-cover z-20 relative" />
+                  <Image src="/images/villa.jpg" alt="Property" width={40} height={40} sizes="40px" className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] object-cover z-10 relative" />
+                  <div className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] bg-[var(--color-accent-strong)] flex items-center justify-center text-xs font-bold text-white z-0 relative">
                     +5k
                   </div>
                 </div>

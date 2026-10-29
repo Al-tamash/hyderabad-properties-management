@@ -4,6 +4,11 @@ import { siteConfig } from "@/site-config";
 
 const linkClass = "inline-block py-1 hover:text-white transition-colors";
 
+async function CopyrightYear() {
+  "use cache";
+  return new Date().getFullYear();
+}
+
 export function Footer() {
   return (
     <footer className="bg-[var(--color-primary)] text-white pt-16 pb-8 border-t border-[var(--color-divider)]/10 mt-auto">
@@ -81,7 +86,7 @@ export function Footer() {
 
       <div className="container mx-auto max-w-6xl px-4 pt-8 border-t border-white/10 text-center text-sm text-gray-400 pb-16 md:pb-0 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
-          &copy; {siteConfig.brand.foundedYear}&ndash;{new Date().getFullYear()} {siteConfig.brand.name}. All rights reserved.
+          &copy; {siteConfig.brand.foundedYear}&ndash;<CopyrightYear /> {siteConfig.brand.name}. All rights reserved.
         </div>
         <div>
           Designed by <a href="https://www.edonesolution.com/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors font-medium">eDone Solutions</a>
