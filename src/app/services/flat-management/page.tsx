@@ -4,8 +4,8 @@ import { ExpandedServicePage } from "@/components/ExpandedServicePage";
 import { Search, ShieldCheck, FileSignature, Wallet, Wrench, Camera } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Flat Management Services in Hyderabad | Tenant KYC & Rent Collection",
-  description: "End-to-end flat and individual apartment unit management in Hyderabad. Strict tenant police verification, 11-month agreement execution, on-time rent remittance, and photo-verified repairs.",
+  title: "Flat Management in Hyderabad | Verified Tenants & Rent",
+  description: "Flat management in Hyderabad covering tenant sourcing, police-verified KYC, 11-month rental agreements, rent collection and photo-verified repair estimates.",
   alternates: {
     canonical: `${siteConfig.brand.url}/services/flat-management`,
   },

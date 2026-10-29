@@ -9,18 +9,23 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
-  weight: ["200", "300", "400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
+
+const HOME_TITLE = `${siteConfig.brand.name} | Trusted Property Care`;
+const HOME_DESCRIPTION =
+  "End-to-end property management in Hyderabad for flats, apartments, villas, plots and commercial assets. Verified tenants and photo-verified repair reports.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.brand.url),
   title: {
-    default: `${siteConfig.brand.name} | Property Management Services in Hyderabad`,
-    template: `%s | ${siteConfig.brand.name}`,
+    default: HOME_TITLE,
+    template: "%s",
   },
-  description: "Hyderabad Properties Management provides professional property management in Hyderabad. End-to-end care for flats, apartments, villas, plots, and commercial properties with verified tenants, photo-verified repairs, and zero escrow delays.",
+  description: HOME_DESCRIPTION,
   alternates: {
-    canonical: '/',
+    canonical: siteConfig.brand.url,
   },
   robots: {
     index: true,
@@ -28,32 +33,32 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    title: `${siteConfig.brand.name} | Property Management in Hyderabad`,
-    description: siteConfig.brand.description,
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     url: siteConfig.brand.url,
     siteName: siteConfig.brand.name,
-    locale: 'en_IN',
-    type: 'website',
+    locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: `${siteConfig.brand.url}/images/villa.jpg`,
+        url: `${siteConfig.brand.url}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.brand.name} - Professional Property Management Hyderabad`,
+        alt: `${siteConfig.brand.name} - Property Management in Hyderabad`,
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: `${siteConfig.brand.name} | Property Management in Hyderabad`,
-    description: siteConfig.brand.description,
-    images: [`${siteConfig.brand.url}/images/villa.jpg`],
+    card: "summary_large_image",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [`${siteConfig.brand.url}/og-image.jpg`],
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
@@ -66,45 +71,52 @@ const jsonLd = {
     {
       "@type": ["LocalBusiness", "RealEstateAgent"],
       "@id": `${siteConfig.brand.url}/#business`,
-      "name": siteConfig.brand.name,
-      "legalName": siteConfig.brand.name,
-      "url": siteConfig.brand.url,
-      "logo": `${siteConfig.brand.url}/hpm-logo-transparent.png`,
-      "image": `${siteConfig.brand.url}/images/villa.jpg`,
-      "description": siteConfig.brand.description,
-      "telephone": siteConfig.contact.phone,
-      "email": siteConfig.contact.email,
-      "address": {
+      name: siteConfig.brand.name,
+      legalName: siteConfig.brand.name,
+      url: siteConfig.brand.url,
+      logo: `${siteConfig.brand.url}/hpm-logo-transparent.png`,
+      image: `${siteConfig.brand.url}/og-image.jpg`,
+      description: siteConfig.brand.description,
+      telephone: siteConfig.contact.phone,
+      email: siteConfig.contact.email,
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": siteConfig.contact.officeAddress,
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "postalCode": "500028",
-        "addressCountry": "IN"
+        streetAddress: siteConfig.contact.officeAddress,
+        addressLocality: "Hyderabad",
+        addressRegion: "Telangana",
+        postalCode: "500028",
+        addressCountry: "IN",
       },
-      "openingHoursSpecification": [
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 17.3927101,
+        longitude: 78.4421488,
+      },
+      hasMap:
+        "https://www.google.com/maps/search/?api=1&query=17.3927101,78.4421488",
+      openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
+          dayOfWeek: [
             "Monday",
             "Tuesday",
             "Wednesday",
             "Thursday",
             "Friday",
-            "Saturday"
+            "Saturday",
           ],
-          "opens": "10:00",
-          "closes": "18:00"
-        }
+          opens: "10:00",
+          closes: "18:00",
+        },
       ],
-      "areaServed": siteConfig.localities.map(loc => ({
+      areaServed: siteConfig.localities.map((loc) => ({
         "@type": "City",
-        "name": `${loc}, Hyderabad`
+        name: `${loc}, Hyderabad`,
       })),
-      "priceRange": "₹₹",
-      "foundingDate": "2009"
-    }
-  ]
+      priceRange: "₹₹",
+      foundingDate: "2009",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -117,6 +129,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         {gaId && (
           <>
             <script
@@ -144,7 +159,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
         <FloatingWhatsApp />
       </body>

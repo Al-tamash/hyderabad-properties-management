@@ -4,8 +4,8 @@ import { ExpandedServicePage } from "@/components/ExpandedServicePage";
 import { Building, Users, Wallet, Wrench, Shield, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Commercial Property Management in Hyderabad | Office & Retail Leasing",
-  description: "Professional commercial property management in Hyderabad (Hitec City, Madhapur, Financial District). Commercial lease administration, CAM maintenance tracking, vendor management, and property tax compliance.",
+  title: "Commercial Property Management in Hyderabad | HPM Leasing",
+  description: "Commercial property management in Hyderabad for offices, retail and warehouses: leasing, rent collection, compliance support and maintenance coordination.",
   alternates: {
     canonical: `${siteConfig.brand.url}/services/commercial-property`,
   },

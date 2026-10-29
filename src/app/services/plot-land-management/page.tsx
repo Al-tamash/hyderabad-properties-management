@@ -4,8 +4,8 @@ import { ExpandedServicePage } from "@/components/ExpandedServicePage";
 import { Map, AlertTriangle, ShieldCheck, Leaf, Camera, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Open Plot & Land Management in Hyderabad | Anti-Encroachment & Inspections",
-  description: "Protect your vacant land and residential plots across Hyderabad from encroachment. Quarterly geo-tagged inspection reports, boundary fencing checks, signboards, and weed clearance.",
+  title: "Open Plot & Land Management in Hyderabad | Inspections",
+  description: "Open plot and land management in Hyderabad with boundary checks, anti-encroachment boards, debris clearing and geo-tagged quarterly inspection reports.",
   alternates: {
     canonical: `${siteConfig.brand.url}/services/plot-land-management`,
   },

@@ -4,8 +4,8 @@ import { ExpandedServicePage } from "@/components/ExpandedServicePage";
 import { Building2, Users, Wrench, Shield, ClipboardCheck, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Apartment & Society Management in Hyderabad | Multi-Unit Property Administration",
-  description: "Institutional-grade apartment complex and multi-unit building management in Hyderabad. Full common-area upkeep, lift/generator AMC oversight, security personnel coordination, and resident mediation.",
+  title: "Apartment Management in Hyderabad | Society & Facility Care",
+  description: "Apartment and society management in Hyderabad: common-area upkeep, lift and generator AMC oversight, security coordination and clear monthly owner reports.",
   alternates: {
     canonical: `${siteConfig.brand.url}/services/apartment-management`,
   },

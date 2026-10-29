@@ -4,8 +4,8 @@ import { ExpandedServicePage } from "@/components/ExpandedServicePage";
 import { Home, Droplets, Leaf, Shield, Wrench, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Villa & Farmhouse Caretaking in Hyderabad | Luxury Estate Management",
-  description: "Discreet, high-end caretaking for luxury villas, gated communities, and weekend farmhouses in Hyderabad (Shankarpally, Tellapur, Moinabad). Deep cleaning, swimming pool upkeep, gardening, and 24/7 security.",
+  title: "Villa & Farmhouse Management in Hyderabad | HPM Care",
+  description: "Villa and farmhouse management in Hyderabad with scheduled inspections, landscaping and pool coordination, security checks and photo-verified reports.",
   alternates: {
     canonical: `${siteConfig.brand.url}/services/villa-farmhouse`,
   },
