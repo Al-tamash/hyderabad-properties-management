@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/site-config";
 import {
@@ -70,7 +71,14 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
             {/* Right Side Image (Arch Design) */}
             <div className="w-full md:w-[50%] lg:w-[45%] flex justify-center relative">
               <div className="w-full max-w-[400px] aspect-[4/5] rounded-t-full rounded-b-[2.5rem] border-[12px] border-white/95 shadow-2xl overflow-hidden relative bg-white/20">
-                <img src={data.heroImage} alt={data.title} className="w-full h-full object-cover" />
+                <Image
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  src={data.heroImage}
+                  alt={data.title}
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -89,13 +97,13 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
             {/* Left Side Bento Grid Images */}
             <div className="w-full lg:w-1/2 relative h-[400px] md:h-[500px]">
               <div className="absolute left-0 top-0 w-[55%] h-[45%] rounded-2xl overflow-hidden shadow-lg border-4 border-white z-10 bg-gray-100">
-                <img src={data.gallery[1] || data.overviewImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="About Us Image 1" />
+                <img src={data.gallery[1] || data.overviewImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Managed property detail" loading="lazy" decoding="async" />
               </div>
               <div className="absolute left-0 bottom-[5%] w-[65%] h-[45%] rounded-2xl overflow-hidden shadow-lg border-4 border-white z-20 bg-gray-100">
-                <img src={data.gallery[2] || data.heroImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="About Us Image 2" />
+                <img src={data.gallery[2] || data.heroImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Managed property interior" loading="lazy" decoding="async" />
               </div>
               <div className="absolute right-0 top-[25%] w-[55%] h-[55%] rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-30 bg-gray-100">
-                <img src={data.gallery[3] || data.overviewImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="About Us Image 3" />
+                <img src={data.gallery[3] || data.overviewImage} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Managed property exterior" loading="lazy" decoding="async" />
               </div>
             </div>
 
@@ -144,7 +152,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
             <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {data.gallery.map((img, i) => (
                 <div key={i} className="w-[280px] h-[200px] md:w-[320px] md:h-[240px] rounded-2xl overflow-hidden shadow-sm shrink-0 snap-start group relative">
-                  <img src={img} alt={`${data.title} Gallery ${i + 1}`} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" />
+                  <img src={img} alt={`${data.title} gallery image ${i + 1}`} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
                 </div>
               ))}

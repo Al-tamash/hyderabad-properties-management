@@ -21,7 +21,14 @@ export default function AboutPage() {
       {/* 1. HERO SECTION (Matches Villagex Top Banner) */}
       <section className="relative w-full h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/images/villa.jpg" alt={`About ${siteConfig.brand.name}`} className="w-full h-full object-cover" />
+          <Image
+            fill
+            priority
+            sizes="100vw"
+            src="/images/villa.jpg"
+            alt=""
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-[var(--color-primary)]/80"></div>
         </div>
         <div className="relative z-10 text-center text-white flex flex-col items-center pt-16">
@@ -71,16 +78,16 @@ export default function AboutPage() {
             <div className="relative h-full min-h-[400px] flex gap-4">
                {/* Left Image */}
                <div className="w-1/2 h-full rounded-2xl overflow-hidden shadow-lg">
-                 <img src="/images/flat.jpg" className="w-full h-full object-cover" alt="Property" />
+                 <img src="/images/flat.jpg" className="w-full h-full object-cover" alt="Managed flat interior in Hyderabad" loading="lazy" decoding="async" />
                </div>
                
                {/* Right Stacked Images */}
                <div className="w-1/2 flex flex-col gap-4">
                  <div className="h-1/2 rounded-2xl overflow-hidden shadow-lg">
-                   <img src="/images/villa.jpg" className="w-full h-full object-cover" alt="Property" />
+                   <img src="/images/villa.jpg" className="w-full h-full object-cover" alt="Managed villa exterior in Hyderabad" loading="lazy" decoding="async" />
                  </div>
                  <div className="h-1/2 rounded-2xl overflow-hidden shadow-lg">
-                   <img src="/images/commercial.jpg" className="w-full h-full object-cover" alt="Property" />
+                   <img src="/images/commercial.jpg" className="w-full h-full object-cover" alt="Managed commercial property in Hyderabad" loading="lazy" decoding="async" />
                  </div>
                </div>
 
@@ -100,7 +107,7 @@ export default function AboutPage() {
             
             <div className="w-full lg:w-1/2">
               <div className="rounded-3xl overflow-hidden shadow-sm h-[300px] md:h-[350px] lg:w-[90%] mx-auto">
-                <img src="/images/flat.jpg" className="w-full h-full object-cover" alt="What We Do" />
+                <img src="/images/flat.jpg" className="w-full h-full object-cover" alt="Property services in Hyderabad" loading="lazy" decoding="async" />
               </div>
             </div>
 
@@ -170,10 +177,10 @@ export default function AboutPage() {
             <div className="w-full lg:w-1/2 relative pb-16">
               <div className="flex gap-4 h-[400px]">
                 <div className="w-1/2 rounded-2xl overflow-hidden shadow-lg">
-                  <img src="/images/flat.jpg" className="w-full h-full object-cover" alt="Property Care" />
+                  <img src="/images/flat.jpg" className="w-full h-full object-cover" alt="Routine flat inspection" loading="lazy" decoding="async" />
                 </div>
                 <div className="w-1/2 rounded-2xl overflow-hidden shadow-lg">
-                  <img src="/images/villa.jpg" className="w-full h-full object-cover" alt="Inspections" />
+                  <img src="/images/villa.jpg" className="w-full h-full object-cover" alt="Villa inspection" loading="lazy" decoding="async" />
                 </div>
               </div>
               
@@ -318,7 +325,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
-              <img src="/images/villa.jpg" alt="On Ground Verification" className="object-cover w-full h-full" />
+              <img src="/images/villa.jpg" alt="On-ground verification visit" className="object-cover w-full h-full" loading="lazy" decoding="async" />
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[var(--color-primary)]">Real People. Real Property. On-Ground Presence.</h2>
@@ -372,7 +379,7 @@ export default function AboutPage() {
               "/images/plot.jpg", 
             ].map((img, i) => (
               <div key={i} className="aspect-[4/3] rounded-xl overflow-hidden shadow-sm shrink-0 snap-center group relative h-48 md:h-64">
-                <img src={img} alt={`Gallery ${i}`} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" />
+                <img src={img} alt={`Property gallery image ${i + 1}`} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
               </div>
             ))}
