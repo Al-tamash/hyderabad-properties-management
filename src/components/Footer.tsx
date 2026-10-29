@@ -50,26 +50,30 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-white transition-colors">
-                {siteConfig.contact.email.replace('@', ' (at) ')}
-              </Link>
+              <a
+                href={`mailto:${siteConfig.contact.email}`}
+                className="hover:text-white transition-colors [overflow-wrap:anywhere]"
+              >
+                {siteConfig.contact.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=17.3927101,78.4421488"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Get Directions
+              </a>
             </li>
           </ul>
-          
-          {/* SEO Hidden Social Links */}
-          <div className="hidden">
-            <a href="https://facebook.com/hyderabadpropertiesmanagement">Facebook</a>
-            <a href="https://twitter.com/hyderabadpropertiesmanagement">Twitter</a>
-            <a href="https://instagram.com/hyderabadpropertiesmanagement">Instagram</a>
-            <a href="https://linkedin.com/company/hyderabadpropertiesmanagement">LinkedIn</a>
-            <a href="https://youtube.com/@hyderabadpropertiesmanagement">YouTube</a>
-          </div>
         </div>
       </div>
       
       <div className="container mx-auto max-w-6xl px-4 pt-8 border-t border-white/10 text-center text-sm text-gray-500 pb-16 md:pb-0 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
-          &copy; {siteConfig.brand.foundedYear} {siteConfig.brand.name}. All rights reserved.
+          &copy; {siteConfig.brand.foundedYear}&ndash;{new Date().getFullYear()} {siteConfig.brand.name}. All rights reserved.
         </div>
         <div>
           Designed by <a href="https://www.edonesolution.com/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">eDone Solutions</a>

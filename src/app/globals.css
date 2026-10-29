@@ -5,6 +5,8 @@
   --foreground: #0F172A;
   --color-primary: #0f172a;
   --color-accent: #06b6d4;
+  /* Accessible accent for text and buttons (4.5:1+ on white and for white text on it) */
+  --color-accent-strong: #0e7490;
   --color-muted: #475569;
   --color-divider: #f1f5f9;
 }
@@ -14,6 +16,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--color-primary);
   --color-accent: var(--color-accent);
+  --color-accent-strong: var(--color-accent-strong);
   --color-muted: var(--color-muted);
   --color-divider: var(--color-divider);
   --font-sans: var(--font-jakarta);
@@ -56,4 +59,48 @@ h4, h5, h6 {
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Keep anchor targets clear of the sticky header */
+section[id],
+div[id="services"],
+div[id="faq"],
+div[id="coverage"] {
+  scroll-margin-top: 5rem;
+}
+
+/* Visible keyboard focus for every interactive element */
+:focus-visible {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: top 0.15s ease-in-out;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Respect the user's motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

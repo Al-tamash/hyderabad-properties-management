@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
     description: "Hyderabad Properties Management provides professional property management, absolute transparency, strict tenant KYC, and photo-verified repair estimates for assets in Hyderabad.",
     foundedYear: 2009,
     city: "Hyderabad, Telangana",
-    url: "https://product-management-gold-ten.vercel.app",
+    url: "https://www.hyderabadpropertiesmanagement.com",
   },
   contact: {
     phone: "+919502786217",

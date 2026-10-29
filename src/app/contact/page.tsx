@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/site-config";
 import ContactClient from "./ContactClient";
+import { OfficeMap } from "@/components/OfficeMap";
 
 export const metadata: Metadata = {
   title: "Contact Us | Hyderabad Properties Management Office & Support",
@@ -33,5 +34,10 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactClient />;
+  return (
+    <>
+      <ContactClient />
+      <OfficeMap />
+    </>
+  );
 }
