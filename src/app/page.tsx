@@ -45,6 +45,18 @@ export default function HomePage() {
         stagger: 0.1,
         ease: "power2.out",
       });
+
+      gsap.from(".portfolio-tile", {
+        scrollTrigger: {
+          trigger: ".portfolio-section",
+          start: "top 75%",
+        },
+        y: 32,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.07,
+        ease: "power3.out",
+      });
     });
 
     return () => mm.revert();
@@ -57,37 +69,89 @@ export default function HomePage() {
   const faqsData = [
     {
       q: "How does your pricing work without fixed rate cards?",
-      a: "We do not use generic fee percentages. Because every asset demands a different level of operational bandwidth, we provide a custom, flat-fee management quote only after a comprehensive on-ground assessment of your property's condition and specific requirements. This guarantees absolute transparency and zero hidden operational costs."
+      a: "We don't work from a rate card. Every property needs a different amount of attention, so we visit first, look at the condition and the work involved, then quote a flat monthly fee. The quote sets out what is covered, so there are no surprise charges later."
     },
     {
       q: "Do you provide assistance with NRI taxation and TDS for rental income?",
-      a: "Yes. Our dedicated remote dashboard desk assists NRI owners in navigating local taxation norms, coordinating with chartered accountants for proper TDS deduction compliance, and ensuring seamless international rent remittance without regulatory friction."
+      a: "We keep the property records your chartered accountant needs and coordinate with them on TDS and remittance. Tax advice stays with your CA; we handle the property side and make sure paperwork is not holding up your rent."
     },
     {
       q: "How are maintenance costs and repair disputes handled?",
-      a: "No repair is executed without prior approval. We provide photo-verified estimates for any required maintenance. Once approved by you, the repair is conducted, and post-repair photos alongside original vendor invoices are submitted to ensure absolute financial integrity."
+      a: "No repair starts without your approval. We send a photo of the problem and a written estimate from the vendor. Once you approve, the work is done and you get after photos along with the original invoice."
     },
     {
       q: "How do you protect vacant plots from encroachment?",
-      a: "Our Plot Management vertical includes rigorous boundary pillar and fencing integrity checks. We install strong anti-encroachment warning boards, clear weed/debris to maintain high visibility, and send you quarterly geo-tagged photo and video inspection reports to prove absolute physical custody."
+      a: "We visit on a fixed schedule, check the boundary pillars and fencing, clear weeds and debris so the land stays visible from the road, and put up anti-encroachment boards. Each visit is documented with geo-tagged photos and video, which we send to you."
     }
+  ];
+
+  const portfolioData = [
+    {
+      img: "/images/portfolio/villa-farmhouse-lawn-sunset-hyderabad.jpg",
+      alt: "Villa and farmhouse with a manicured lawn and terrace at sunset in Hyderabad",
+      type: "Villa & Farmhouse",
+      note: "Lawn, terrace and pool upkeep",
+      href: "/services/villa-farmhouse",
+      span: "col-span-2 row-span-2",
+    },
+    {
+      img: "/images/portfolio/apartment-building-facade-hyderabad.jpg",
+      alt: "Modern standalone apartment building with balconies in Hyderabad",
+      type: "Apartment",
+      note: "Block and common area upkeep",
+      href: "/services/apartment-management",
+      span: "col-span-1 row-span-2",
+    },
+    {
+      img: "/images/portfolio/tazeen-heights-apartment-moinabad.jpg",
+      alt: "Tazeen Heights apartment building with balconies in Moinabad, Hyderabad",
+      type: "Apartment · Moinabad",
+      note: "Tazeen Heights",
+      href: "/services/apartment-management",
+      span: "col-span-1 row-span-1",
+    },
+    {
+      img: "/images/portfolio/barka-plaza-commercial-complex-hyderabad.jpg",
+      alt: "Barka Plaza mixed-use commercial complex with ground floor retail in Hyderabad",
+      type: "Commercial",
+      note: "Barka Plaza",
+      href: "/services/commercial-property",
+      span: "col-span-1 row-span-1",
+      focus: "object-[50%_18%]",
+    },
+    {
+      img: "/images/portfolio/ss-convention-showroom-building-hyderabad.jpg",
+      alt: "Commercial showroom and office building facades in Hyderabad",
+      type: "Commercial",
+      note: "SS Convention",
+      href: "/services/commercial-property",
+      span: "col-span-2 row-span-1",
+    },
+    {
+      img: "/images/portfolio/duplex-villa-garden-hyderabad.jpg",
+      alt: "Duplex villa with a private lawn and covered balcony in Hyderabad",
+      type: "Villa",
+      note: "Standalone home care",
+      href: "/services/villa-farmhouse",
+      span: "col-span-2 row-span-1",
+    },
   ];
 
   const reviewsData = [
     {
-      text: `Living in the US, managing my Hyderabad villa was a nightmare until I found ${siteConfig.brand.name}. Their photo-verified repair estimates give me absolute peace of mind.`,
+      text: `I live in the US, and managing a villa in Hyderabad used to be a constant worry. Now I get photos before and after every repair, and the estimate comes to me first.`,
       initials: "RK",
       name: "Rahul K.",
       role: "NRI, United States"
     },
     {
-      text: `The tenant KYC process is incredibly strict. I've had zero rent defaults in my apartment since ${siteConfig.brand.name} took over the management.`,
+      text: `Their tenant checks are thorough. I have not had a single payment issue since ${siteConfig.brand.name} took over my apartment.`,
       initials: "SM",
       name: "Sneha M.",
       role: "Local Investor"
     },
     {
-      text: "I receive direct rent transfers to my account without escrow holding. Total transparency and excellent commercial lease administration.",
+      text: "Rent comes straight to my account, and the lease paperwork is handled without me chasing anyone.",
       initials: "AD",
       name: "Anil D.",
       role: "Commercial Landlord"
@@ -99,7 +163,7 @@ export default function HomePage() {
       role: "Plot Owner"
     },
     {
-      text: `I was struggling with common area maintenance in our 4-unit building. ${siteConfig.brand.name} took over the entire society coordination flawlessly.`,
+      text: `I was struggling with common area maintenance in our 4-unit building. ${siteConfig.brand.name} took over the society coordination. The common areas are finally looked after properly.`,
       initials: "PR",
       name: "Priya R.",
       role: "Apartment Owner"
@@ -116,7 +180,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
             <p className="hero-text text-xl md:text-2xl font-serif italic text-cyan-400 mb-4 tracking-wide">
-              Comprehensive property management in Hyderabad
+              Property management in Hyderabad, since 2009
             </p>
             <h1 className="hero-text text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8 drop-shadow-lg">
               Your Assets, Our Care
@@ -157,7 +221,7 @@ export default function HomePage() {
                         setSelectedLocality(loc);
                         setOpenLocality(false);
                       }}
-                      className="px-4 py-2 hover:bg-cyan-50 hover:text-[var(--color-accent-strong)] transition-colors cursor-pointer text-sm font-medium text-gray-700"
+                      className="px-4 py-2 hover:bg-cyan-50 hover:text-[var(--color-accent-strong)] transition-colors cursor-pointer text-sm font-medium text-[var(--color-primary)]"
                     >
                       {loc === "Other" ? "Other Locations..." : loc}
                     </div>
@@ -187,7 +251,7 @@ export default function HomePage() {
                         setSelectedType(type);
                         setOpenType(false);
                       }}
-                      className="px-4 py-2 hover:bg-cyan-50 hover:text-[var(--color-accent-strong)] transition-colors cursor-pointer text-sm font-medium text-gray-700"
+                      className="px-4 py-2 hover:bg-cyan-50 hover:text-[var(--color-accent-strong)] transition-colors cursor-pointer text-sm font-medium text-[var(--color-primary)]"
                     >
                       {type}
                     </div>
@@ -201,7 +265,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="w-full md:w-auto bg-[var(--color-accent-strong)] hover:bg-[var(--color-primary)] text-white px-10 py-3.5 rounded-full font-bold transition-colors text-center"
             >
-              Search
+              Ask on WhatsApp
             </a>
           </div>
         </div>
@@ -210,7 +274,7 @@ export default function HomePage() {
       {/* 2. Categories */}
       <section className="verticals-section py-24 bg-[#F8FAFC]" id="services">
         <div className="container mx-auto px-4 text-center">
-          <p className="font-serif italic text-2xl text-[var(--color-accent-strong)] mb-2">Specialized Assets For You</p>
+          <p className="font-serif italic text-2xl text-[var(--color-accent-strong)] mb-2">What We Manage</p>
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-16">Asset Categories</h2>
 
           <div className="flex overflow-x-auto pb-12 snap-x hide-scrollbar gap-6 md:justify-center px-4">
@@ -273,7 +337,7 @@ export default function HomePage() {
                 {[
                   { title: "Custom Proposal", desc: "A clear, flat-fee plan made just for your property." },
                   { title: "Your Go-To Manager", desc: "One dedicated person to call whenever you need anything." },
-                  { title: "Seamless Handover", desc: "We take the keys, and you take a breather." }
+                  { title: "Simple Handover", desc: "We take the keys, and you take a breather." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-5 items-start group">
                     <div className="w-12 h-12 bg-cyan-100 text-[var(--color-accent-strong)] rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[var(--color-accent-strong)] group-hover:text-white transition-colors">
@@ -295,7 +359,7 @@ export default function HomePage() {
       <section className="py-24 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <p className="font-serif italic text-2xl text-[var(--color-accent-strong)] mb-2">Absolute Transparency</p>
+            <p className="font-serif italic text-2xl text-[var(--color-accent-strong)] mb-2">Straight Answers</p>
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">Why Property Owners Trust Us</h2>
           </div>
 
@@ -333,7 +397,7 @@ export default function HomePage() {
               <div className="relative z-20 p-6 flex flex-col gap-3">
 
                 <h3 className="text-2xl font-bold text-white leading-tight">Border-Free<br/>Management</h3>
-                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">Dedicated support designed specifically to eliminate timezone friction for NRI property owners.</p>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">Support timed around your timezone, for owners living outside India.</p>
               </div>
             </div>
 
@@ -345,7 +409,7 @@ export default function HomePage() {
               <div className="relative z-20 p-6 flex flex-col gap-3">
 
                 <h3 className="text-2xl font-bold text-white leading-tight">Zero<br/>Escrow</h3>
-                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">Zero funds held in escrow: rent transferred directly to owner&apos;s designated account.</p>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">Rent goes straight to your bank account. We never hold your money.</p>
               </div>
             </div>
 
@@ -357,7 +421,7 @@ export default function HomePage() {
       <section className="py-24 bg-white" id="coverage">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <p className="font-serif italic text-2xl text-[var(--color-accent-strong)] mb-2">Top Coverage</p>
+            <p className="font-serif italic text-2xl text-[var(--color-accent-strong)] mb-2">Where We Work</p>
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">Geographic Coverage</h2>
           </div>
 
@@ -376,7 +440,59 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Testimonials */}
+      {/* 6. Real assets portfolio */}
+      <section className="portfolio-section py-24 bg-[var(--color-primary)]" id="properties">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between mb-12">
+            <div className="max-w-xl">
+              <p className="font-serif italic text-2xl text-cyan-400 mb-2">On The Ground</p>
+              <h2 className="text-3xl md:text-4xl font-semibold text-white">Managed by HPM</h2>
+            </div>
+            <div className="max-w-sm">
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                Apartment blocks, standalone villas and busy commercial complexes across
+                Hyderabad. Every one is inspected in person, photographed, and reported
+                back to its owner.
+              </p>
+              <Link
+                href="/services/commercial-property"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-cyan-300 underline underline-offset-4 decoration-cyan-300/40 hover:text-white hover:decoration-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+              >
+                How we manage commercial assets <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[130px] md:auto-rows-[190px] gap-3 md:gap-4">
+            {portfolioData.map((asset) => (
+              <Link
+                key={asset.img}
+                href={asset.href}
+                className={`portfolio-tile group relative overflow-hidden rounded-[2rem] ${asset.span} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300`}
+              >
+                <Image
+                  fill
+                  src={asset.img}
+                  alt={asset.alt}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className={`object-cover ${asset.focus ?? ""} transition-transform duration-700 group-hover:scale-[1.04]`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/95 via-[var(--color-primary)]/40 to-transparent to-65%" />
+                <div className="absolute inset-x-0 bottom-0 p-3 md:p-5 [text-shadow:0_1px_12px_rgba(15,23,42,0.9)]">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-cyan-300 md:text-[11px] md:tracking-[0.16em] whitespace-nowrap">
+                    {asset.type}
+                  </p>
+                  <p className="mt-1 text-xs font-semibold leading-snug text-white md:text-base">
+                    {asset.note}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Testimonials */}
       <section className="py-24 bg-[#F8FAFC]" id="reviews">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
@@ -410,11 +526,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. FAQ */}
+      {/* 8. FAQ */}
       <section className="py-24 bg-white" id="faq">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16 flex flex-col items-center">
-            <p className="font-serif italic text-2xl text-[var(--color-accent-strong)] mb-2">Queries Solved</p>
+            <p className="font-serif italic text-2xl text-[var(--color-accent-strong)] mb-2">Common Questions</p>
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">Frequently Asked Questions</h2>
           </div>
 
@@ -440,7 +556,7 @@ export default function HomePage() {
                       </span>
                       <span
                         aria-hidden="true"
-                        className={`w-10 h-10 bg-cyan-50 text-[var(--color-accent-strong)] rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[var(--color-accent-strong)] text-white' : ''}`}
+                        className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[var(--color-primary)] text-white' : 'bg-cyan-50 text-[var(--color-accent-strong)]'}`}
                       >
                         <ChevronDown className="w-5 h-5" />
                       </span>
@@ -463,7 +579,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. Final CTA */}
+      {/* 9. Final CTA */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="bg-[var(--color-primary)] rounded-[3rem] p-10 md:p-16 text-white flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl relative overflow-hidden">
@@ -478,7 +594,7 @@ export default function HomePage() {
                 Your Property Deserves<br/>Professional Care
               </h2>
               <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl">
-                Whether you own a rental flat, apartment, villa, farmhouse, plot or commercial property in Hyderabad, {siteConfig.brand.name} can help you manage it with greater confidence and transparency.
+                Whether you own a rental flat, apartment, villa, farmhouse, plot or commercial property in Hyderabad, {siteConfig.brand.name} can take the day-to-day work off your hands.
               </p>
             </div>
 
@@ -499,11 +615,11 @@ export default function HomePage() {
                   <Image src="/images/apartment.jpg" alt="Property" width={40} height={40} className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] object-cover z-20 relative" />
                   <Image src="/images/villa.jpg" alt="Property" width={40} height={40} className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] object-cover z-10 relative" />
                   <div className="w-10 h-10 rounded-full border-2 border-[var(--color-primary)] bg-[var(--color-accent-strong)] flex items-center justify-center text-xs font-bold text-white z-0 relative">
-                    +5k
+                    +20
                   </div>
                 </div>
                 <div className="text-sm">
-                  <span className="font-bold text-white">5/5</span> <span className="text-gray-400">(20+ properties)</span>
+                  <span className="font-bold text-white">20+</span> <span className="text-gray-400">properties managed</span>
                 </div>
               </div>
             </div>

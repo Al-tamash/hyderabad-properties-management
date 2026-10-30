@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Open Plot & Land Management in Hyderabad | ${siteConfig.brand.name}`,
-    description: "Physical custody and boundary protection for vacant land plots in Hyderabad. Geo-tagged visual inspections and anti-encroachment vigilance.",
+    description: "Physical checks and boundary protection for vacant plots in Hyderabad, with geo-tagged inspection reports.",
     url: `${siteConfig.brand.url}/services/plot-land-management`,
     siteName: siteConfig.brand.name,
     locale: "en_IN",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Open Plot & Land Management in Hyderabad | ${siteConfig.brand.name}`,
-    description: "Physical custody and boundary protection for vacant land plots in Hyderabad. Geo-tagged visual inspections and anti-encroachment vigilance.",
+    description: "Physical checks and boundary protection for vacant plots in Hyderabad, with geo-tagged inspection reports.",
     images: [`${siteConfig.brand.url}/images/plot.jpg`],
   },
 };
@@ -39,13 +39,13 @@ export default function PlotLandManagementPage() {
       data={{
         id: "plot",
         title: "Plot & Land Management",
-        heroDescription: "Vigilant protection for vacant plots. We ensure your open land remains secure, maintained, and free from encroachment.",
+        heroDescription: "Regular visits and documented checks for vacant plots — boundaries, encroachment and upkeep.",
         heroImage: "/images/plot.jpg",
-        overviewHeading: "Absolute Custody for Open Land",
+        overviewHeading: "Keeping an Eye on Empty Land",
         overviewDescription: [
-          "Vacant plots and open land are highly vulnerable to encroachment, illegal dumping, and boundary disputes if left unmonitored.",
-          "Our Plot Management service provides rigorous, on-ground vigilance. We conduct regular physical inspections, verify boundary pillars, and install prominent anti-encroachment boards to establish clear ownership.",
-          "Through quarterly geo-tagged photo and video reports, we provide absolute proof of your land's security, giving peace of mind to NRI owners and distant investors."
+          "An empty plot is easy to ignore, which is exactly when boundaries get moved and debris gets dumped.",
+          "We visit on a schedule, check the boundary pillars and fencing, and put up boards that make it clear the land is owned and watched.",
+          "Every visit is recorded with geo-tagged photos and video and sent to you as a quarterly report. You see the land as it is, without having to fly down."
         ],
         overviewImage: "/images/plot.jpg",
         keyInclusions: [
@@ -59,12 +59,12 @@ export default function PlotLandManagementPage() {
           "Detailed owner reporting"
         ],
         whatWeHandle: [
-          { title: "Site Visits", desc: "Routine physical inspections of the plot.", icon: <Map /> },
-          { title: "Boundary Checks", desc: "Ensuring pillars and fences are intact.", icon: <ShieldCheck /> },
-          { title: "Warning Boards", desc: "Installing 'Property of XYZ' boards to deter trespassers.", icon: <AlertTriangle /> },
-          { title: "Weed Clearing", desc: "Coordinating bush clearing to maintain visibility.", icon: <Leaf /> },
-          { title: "Visual Proof", desc: "Geo-tagged photos and drone videos if required.", icon: <Camera /> },
-          { title: "Reporting", desc: "Comprehensive condition reports sent quarterly.", icon: <FileText /> }
+          { title: "Site Visits", desc: "Physical inspections of the plot on a set schedule.", icon: <Map /> },
+          { title: "Boundary Checks", desc: "Checking that pillars and fences are intact.", icon: <ShieldCheck /> },
+          { title: "Warning Boards", desc: "Putting up 'Private Property' boards with the owner's name.", icon: <AlertTriangle /> },
+          { title: "Weed Clearing", desc: "Clearing bushes so the plot stays visible from the road.", icon: <Leaf /> },
+          { title: "Visual Proof", desc: "Geo-tagged photos, plus drone footage where needed.", icon: <Camera /> },
+          { title: "Reporting", desc: "A condition report every quarter.", icon: <FileText /> }
         ],
         howItWorks: [
           { step: 1, title: "Initial Survey", desc: "Mapping the plot boundaries." },
@@ -83,12 +83,12 @@ export default function PlotLandManagementPage() {
         ],
         reviews: [
           {
-            quote: "I haven't visited India in 5 years, but the geo-tagged videos from Hyderabad Properties Management give me 100% confidence my land is safe.",
+            quote: "I haven't visited India in 5 years, but the geo-tagged videos from HPM give me confidence that my land is being watched.",
             name: "Sunil Reddy",
             location: "Plot Owner, Kokapet (NRI)"
           },
           {
-            quote: "They immediately spotted a broken fence and had it fixed before any encroachment could happen. Incredible vigilance.",
+            quote: "They spotted a broken fence on one of their visits and had it repaired before anyone could walk in.",
             name: "Ramesh C.",
             location: "Land Investor, Shamshabad"
           },
@@ -99,12 +99,12 @@ export default function PlotLandManagementPage() {
           }
         ],
         faq: [
-          { question: "How do you prove the inspection actually happened?", answer: "We provide geo-tagged photos and videos with timestamps, proving our personnel were physically on your land." },
-          { question: "What happens if you spot encroachment?", answer: "We immediately notify you, involve local authorities if instructed, and coordinate with legal counsel to resolve the issue swiftly." },
-          { question: "Do you install fencing?", answer: "We do not build fences ourselves, but we coordinate with trusted local vendors to erect or repair barbed wire or compound walls." },
-          { question: "How often do you visit the plot?", answer: "Standard frequency is quarterly, but we offer monthly or custom visit schedules based on the vulnerability of the location." },
-          { question: "Do you clear the land?", answer: "Yes, we coordinate the hiring of labor or machinery to clear weeds, bushes, and illegally dumped debris." },
-          { question: "Is this service available for agricultural land?", answer: "Yes, we manage both residential plots and large open agricultural land parcels." }
+          { question: "How do you prove the inspection actually happened?", answer: "Geo-tagged photos and video with timestamps, so you can see our staff were on your land." },
+          { question: "What happens if you spot encroachment?", answer: "We tell you straight away, involve the authorities if you ask us to, and work with your lawyer if the matter goes further." },
+          { question: "Do you install fencing?", answer: "We do not build fences ourselves, but we coordinate local vendors to erect or repair barbed wire or compound walls." },
+          { question: "How often do you visit the plot?", answer: "Quarterly as standard. Monthly or custom schedules are available for plots in more exposed locations." },
+          { question: "Do you clear the land?", answer: "Yes. We arrange labour or machinery to clear weeds, bushes and illegally dumped debris." },
+          { question: "Is this service available for agricultural land?", answer: "Yes. We manage residential plots as well as larger agricultural parcels." }
         ],
         whatsappMessage: "Hi Hyderabad Properties Management, I need boundary inspection & custody for my Plot in Hyderabad."
       }}

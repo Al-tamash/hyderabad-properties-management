@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Flat Management Services in Hyderabad | ${siteConfig.brand.name}`,
-    description: "Professional flat rental management in Hyderabad. Zero-hassle tenancy, strict background checks, and digital rent remittance.",
+    description: "Flat rental management in Hyderabad — tenant sourcing, police-verified KYC, agreements, rent collection and repairs.",
     url: `${siteConfig.brand.url}/services/flat-management`,
     siteName: siteConfig.brand.name,
     locale: "en_IN",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Flat Management Services in Hyderabad | ${siteConfig.brand.name}`,
-    description: "Professional flat rental management in Hyderabad. Zero-hassle tenancy, strict background checks, and digital rent remittance.",
+    description: "Flat rental management in Hyderabad — tenant sourcing, police-verified KYC, agreements, rent collection and repairs.",
     images: [`${siteConfig.brand.url}/images/flat.jpg`],
   },
 };
@@ -41,7 +41,7 @@ export default function FlatManagementPage() {
         "@type": "Service",
         "name": "Flat Management Services in Hyderabad",
         "serviceType": "Property Management",
-        "description": "End-to-end flat and individual apartment unit management in Hyderabad including tenant KYC verification, 11-month agreement execution, on-time rent remittance, and photo-verified repairs.",
+        "description": "Flat and individual apartment unit management in Hyderabad, including tenant KYC, 11-month agreements, rent collection and photo-verified repairs.",
         "provider": {
           "@type": "LocalBusiness",
           "name": siteConfig.brand.name,
@@ -60,7 +60,7 @@ export default function FlatManagementPage() {
             "name": "What does flat management include?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It includes everything from tenant sourcing, KYC, lease execution, rent collection, to ongoing maintenance and repair coordination."
+              "text": "Tenant sourcing, KYC checks, the rental agreement, rent collection, and ongoing maintenance and repairs."
             }
           },
           {
@@ -68,7 +68,7 @@ export default function FlatManagementPage() {
             "name": "How do you verify tenants?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We conduct strict police verifications, employment checks, and previous landlord references before approving any tenant."
+              "text": "Police verification, employment checks and references from the previous landlord, before we approve anyone."
             }
           },
           {
@@ -76,7 +76,7 @@ export default function FlatManagementPage() {
             "name": "How is rent collected?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Rent is collected digitally and transferred directly to your designated bank account without any escrow holding."
+              "text": "Rent is collected digitally and transferred to your bank account. We do not hold it in escrow."
             }
           },
           {
@@ -84,7 +84,7 @@ export default function FlatManagementPage() {
             "name": "How are maintenance requests handled?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Tenants raise requests with us. We get a quote, seek your approval, complete the work, and provide photo proof along with the vendor invoice."
+              "text": "The tenant reports the problem to us. We get a quote, ask for your approval, get the work done, and send photos with the vendor invoice."
             }
           },
           {
@@ -92,7 +92,7 @@ export default function FlatManagementPage() {
             "name": "Will I receive repair photos?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, we mandate before-and-after photo evidence for every single repair executed at your property."
+              "text": "Yes. Before and after photos are required for every repair, without exception."
             }
           },
           {
@@ -100,7 +100,7 @@ export default function FlatManagementPage() {
             "name": "How often will I receive property updates?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You will receive a monthly rent remittance report, plus immediate updates for any maintenance or tenant-related matters."
+              "text": "A monthly rent statement, plus a message whenever something needs your attention."
             }
           }
         ]
@@ -118,13 +118,13 @@ export default function FlatManagementPage() {
         data={{
         id: "flat",
         title: "Flat Management",
-        heroDescription: "Complete custody for individual rental units. We handle everything from tenant placement to ongoing maintenance.",
+        heroDescription: "Rental management for individual flats — finding tenants, agreements, rent and repairs.",
         heroImage: "/images/flat.jpg",
-        overviewHeading: "Stress-Free Rental Flat Management",
+        overviewHeading: "Management for a Rented Flat",
         overviewDescription: [
-          "Our flat management service helps property owners enjoy the benefits of rental income without the daily hassles of property management.",
-          "Whether you are an NRI or a local investor, we handle tenant sourcing, KYC verification, and maintenance requests on your behalf. You receive rent directly into your account with complete transparency.",
-          "Hyderabad Properties Management helps protect your property's value through regular inspections, timely repairs, and photo-verified maintenance updates."
+          "Owning a rented flat should mean rent in your account and a property that is looked after. That is the part we handle.",
+          "Whether you live abroad or in the next locality, we find the tenant, verify them, manage the agreement and deal with repair calls. Rent is transferred directly to your account.",
+          "We also inspect the flat between tenancies and keep photo records, so you know what condition it is in without a visit."
         ],
         overviewImage: "/images/flat.jpg",
         keyInclusions: [
@@ -138,12 +138,12 @@ export default function FlatManagementPage() {
           "Direct owner communication"
         ],
         whatWeHandle: [
-          { title: "Tenant Sourcing", desc: "We market your property and find reliable, verified tenants.", icon: <Search /> },
-          { title: "KYC & Verification", desc: "Strict police and employment verification for complete safety.", icon: <ShieldCheck /> },
-          { title: "Agreement Execution", desc: "Drafting and executing legally binding 11-month rental agreements.", icon: <FileSignature /> },
-          { title: "Rent Collection", desc: "Timely monthly rent collection transferred directly to your account.", icon: <Wallet /> },
-          { title: "Maintenance", desc: "Plumbing, electrical, and general repairs handled by trusted vendors.", icon: <Wrench /> },
-          { title: "Photo Proof", desc: "Before and after photos provided for all maintenance work.", icon: <Camera /> }
+          { title: "Tenant Sourcing", desc: "We market the flat and screen the people who apply.", icon: <Search /> },
+          { title: "KYC & Verification", desc: "Police and employment verification before a tenant is approved.", icon: <ShieldCheck /> },
+          { title: "Agreement Execution", desc: "Drafting and registering the 11-month rental agreement.", icon: <FileSignature /> },
+          { title: "Rent Collection", desc: "Monthly rent collected and transferred to your account.", icon: <Wallet /> },
+          { title: "Maintenance", desc: "Plumbing, electrical and general repairs through known vendors.", icon: <Wrench /> },
+          { title: "Photo Proof", desc: "Before and after photos for every repair.", icon: <Camera /> }
         ],
         howItWorks: [
           { step: 1, title: "Property Audit", desc: "Initial inspection and rental valuation." },
@@ -154,6 +154,7 @@ export default function FlatManagementPage() {
           { step: 6, title: "Management", desc: "Ongoing rent collection and maintenance." }
         ],
         gallery: [
+          "/images/portfolio/tazeen-heights-apartment-moinabad.jpg",
           "/images/flat.jpg",
           "/images/inspection.jpg",
           "/images/maintenance.jpg",
@@ -162,12 +163,12 @@ export default function FlatManagementPage() {
         ],
         reviews: [
           {
-            quote: "Hyderabad Properties Management made managing my Hyderabad rental property much easier while I was living away.",
+            quote: "HPM made my Hyderabad rental much easier to manage while I was living away.",
             name: "Rahul Sharma",
             location: "Property Owner, Dubai"
           },
           {
-            quote: "Their tenant verification process is incredible. I have peace of mind knowing my flat is in good hands.",
+            quote: "Their tenant verification is thorough. I know exactly who is living in my flat.",
             name: "Sneha Reddy",
             location: "Property Owner, USA"
           },
@@ -178,12 +179,12 @@ export default function FlatManagementPage() {
           }
         ],
         faq: [
-          { question: "What does flat management include?", answer: "It includes everything from tenant sourcing, KYC, lease execution, rent collection, to ongoing maintenance and repair coordination." },
-          { question: "How do you verify tenants?", answer: "We conduct strict police verifications, employment checks, and previous landlord references before approving any tenant." },
-          { question: "How is rent collected?", answer: "Rent is collected digitally and transferred directly to your designated bank account without any escrow holding." },
-          { question: "How are maintenance requests handled?", answer: "Tenants raise requests with us. We get a quote, seek your approval, complete the work, and provide photo proof along with the vendor invoice." },
-          { question: "Will I receive repair photos?", answer: "Yes, we mandate before-and-after photo evidence for every single repair executed at your property." },
-          { question: "How often will I receive property updates?", answer: "You will receive a monthly rent remittance report, plus immediate updates for any maintenance or tenant-related matters." }
+          { question: "What does flat management include?", answer: "Tenant sourcing, KYC checks, the rental agreement, rent collection, and ongoing maintenance and repairs." },
+          { question: "How do you verify tenants?", answer: "Police verification, employment checks and references from the previous landlord, before we approve anyone." },
+          { question: "How is rent collected?", answer: "Rent is collected digitally and transferred to your bank account. We do not hold it in escrow." },
+          { question: "How are maintenance requests handled?", answer: "The tenant reports the problem to us. We get a quote, ask for your approval, get the work done, and send photos with the vendor invoice." },
+          { question: "Will I receive repair photos?", answer: "Yes. Before and after photos are required for every repair, without exception." },
+          { question: "How often will I receive property updates?", answer: "A monthly rent statement, plus a message whenever something needs your attention." }
         ],
         whatsappMessage: "Hi Hyderabad Properties Management, I need rental & tenant management for my Flat in Hyderabad."
       }}

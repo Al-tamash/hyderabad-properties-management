@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Commercial Property Management in Hyderabad | ${siteConfig.brand.name}`,
-    description: "Institutional-grade commercial real estate management in Hyderabad. Office space, retail units, and standalone commercial building administration.",
+    description: "Commercial property management in Hyderabad for offices, retail units and standalone buildings — leases, rent, maintenance and compliance dates.",
     url: `${siteConfig.brand.url}/services/commercial-property`,
     siteName: siteConfig.brand.name,
     locale: "en_IN",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Commercial Property Management in Hyderabad | ${siteConfig.brand.name}`,
-    description: "Institutional-grade commercial real estate management in Hyderabad. Office space, retail units, and standalone commercial building administration.",
+    description: "Commercial property management in Hyderabad for offices, retail units and standalone buildings — leases, rent, maintenance and compliance dates.",
     images: [`${siteConfig.brand.url}/images/commercial.jpg`],
   },
 };
@@ -39,13 +39,13 @@ export default function CommercialPropertyPage() {
       data={{
         id: "commercial",
         title: "Commercial Property Management",
-        heroDescription: "Institutional-grade administration for retail shops, corporate offices, and commercial lease setups.",
+        heroDescription: "Management for shops, offices and commercial buildings — leases, rent, maintenance and statutory dates.",
         heroImage: "/images/commercial.jpg",
-        overviewHeading: "Fiduciary Custody for Commercial Assets",
+        overviewHeading: "Running a Commercial Building",
         overviewDescription: [
-          "Commercial real estate requires a highly professional approach to lease administration, facility maintenance, and tenant relations.",
-          "Our Commercial Property Management vertical serves high-net-worth landlords and institutional investors by providing end-to-end operational oversight.",
-          "We handle complex vendor negotiations, monitor property tax payments, track society dues, and ensure that your commercial space operates seamlessly, preserving its premium yield."
+          "Commercial property runs on dates: rent due dates, escalation dates, tax deadlines, AMC renewals. Miss one and it costs money.",
+          "We manage offices, retail units and standalone commercial buildings for owners who would rather not track all of that themselves.",
+          "We handle vendor negotiations, keep an eye on property tax and society dues, and make sure repairs are done before a tenant has to complain."
         ],
         overviewImage: "/images/commercial.jpg",
         keyInclusions: [
@@ -60,52 +60,52 @@ export default function CommercialPropertyPage() {
           "Regular owner updates"
         ],
         whatWeHandle: [
-          { title: "Inspections", desc: "Thorough audits of commercial facilities and systems.", icon: <Building /> },
-          { title: "Tenant Relations", desc: "Professional mediation with corporate tenants.", icon: <Users /> },
-          { title: "Rent Monitoring", desc: "Tracking rent, CAM charges, and lease escalations.", icon: <Wallet /> },
-          { title: "Vendor Mgt", desc: "Coordinating AMCs for HVAC, fire safety, and lifts.", icon: <Wrench /> },
-          { title: "Compliance", desc: "Tracking property tax and municipal dues.", icon: <Shield /> },
-          { title: "Reporting", desc: "Detailed institutional-grade financial reporting.", icon: <ClipboardCheck /> }
+          { title: "Inspections", desc: "Regular checks on the building and its systems.", icon: <Building /> },
+          { title: "Tenant Relations", desc: "Day-to-day contact with corporate tenants.", icon: <Users /> },
+          { title: "Rent Monitoring", desc: "Tracking rent, CAM charges and lease escalations.", icon: <Wallet /> },
+          { title: "Vendor Mgt", desc: "Coordinating AMCs for HVAC, fire safety and lifts.", icon: <Wrench /> },
+          { title: "Compliance", desc: "Keeping track of property tax and municipal dues.", icon: <Shield /> },
+          { title: "Reporting", desc: "A clear monthly statement of income and spend.", icon: <ClipboardCheck /> }
         ],
         howItWorks: [
-          { step: 1, title: "Asset Audit", desc: "Comprehensive facility inspection." },
-          { step: 2, title: "Lease Review", desc: "Analyzing terms and escalation clauses." },
-          { step: 3, title: "Vendor Setup", desc: "Establishing critical maintenance contracts." },
-          { step: 4, title: "Tenant Intro", desc: "Establishing a single point of contact." },
-          { step: 5, title: "Operations", desc: "Daily monitoring and maintenance." },
-          { step: 6, title: "Reporting", desc: "Monthly financial and operational updates." }
+          { step: 1, title: "Asset Audit", desc: "A full inspection of the building and its systems." },
+          { step: 2, title: "Lease Review", desc: "Reading the terms and escalation clauses." },
+          { step: 3, title: "Vendor Setup", desc: "Putting maintenance contracts in place." },
+          { step: 4, title: "Tenant Intro", desc: "Introducing a single point of contact." },
+          { step: 5, title: "Operations", desc: "Day-to-day monitoring and repairs." },
+          { step: 6, title: "Reporting", desc: "A monthly update on money and maintenance." }
         ],
         gallery: [
+          "/images/portfolio/ss-convention-showroom-building-hyderabad.jpg",
+          "/images/portfolio/barka-plaza-commercial-complex-hyderabad.jpg",
           "/images/commercial.jpg",
           "/images/handshake.jpg",
-          "/images/inspection.jpg",
-          "/images/maintenance.jpg",
           "/images/agreement.jpg"
         ],
         reviews: [
           {
-            quote: "Hyderabad Properties Management handles the leasing and maintenance of our Hitec City office space impeccably. They are highly professional.",
+            quote: "HPM handles the leasing and maintenance of our Hitec City office. They are easy to reach and things get done.",
             name: "Sanjay M.",
             location: "Commercial Landlord, Hitec City"
           },
           {
-            quote: "Tracking CAM charges and lease escalations used to be a mess. Now everything is automated and perfectly reported.",
+            quote: "Keeping track of CAM charges and escalations used to be a mess. Now I get one clear statement each month.",
             name: "Deepak R.",
             location: "Retail Shop Owner, Banjara Hills"
           },
           {
-            quote: "Their vendor management for HVAC and fire systems is top tier. A truly institutional-grade service.",
+            quote: "HVAC and fire systems are looked after properly, and I get the service reports without having to ask.",
             name: "Aditi S.",
             location: "Corporate Investor"
           }
         ],
         faq: [
-          { question: "What types of commercial properties do you manage?", answer: "We manage retail shops, corporate office floors, standalone commercial buildings, and warehouses." },
-          { question: "Do you handle lease negotiations?", answer: "We administer existing leases, track escalations, and can assist in drafting renewals." },
-          { question: "How do you manage specialized maintenance like HVAC?", answer: "We engage and coordinate with specialized, certified vendors for complex systems like central AC, elevators, and fire safety." },
-          { question: "Do you track property tax?", answer: "Yes, we monitor property tax deadlines and society dues to ensure your property remains compliant." },
-          { question: "Can you manage multi-tenant buildings?", answer: "Absolutely. We manage rent rolls, common area maintenance (CAM) apportioning, and dispute resolution for multi-tenant properties." },
-          { question: "What kind of reporting do you provide?", answer: "We provide detailed monthly logs covering rent collection, CAM utilization, vendor payments, and maintenance histories." }
+          { question: "What types of commercial properties do you manage?", answer: "Retail shops, office floors, standalone commercial buildings and warehouses." },
+          { question: "Do you handle lease negotiations?", answer: "We administer existing leases, track escalations, and can help draft renewals." },
+          { question: "How do you manage specialised maintenance like HVAC?", answer: "We bring in certified vendors for central AC, lifts and fire safety, and check that the work has actually been done." },
+          { question: "Do you track property tax?", answer: "Yes. We keep an eye on property tax deadlines and society dues so nothing lapses." },
+          { question: "Can you manage multi-tenant buildings?", answer: "Yes. We handle rent rolls, CAM apportioning and tenant disputes for buildings with multiple occupants." },
+          { question: "What kind of reporting do you provide?", answer: "A monthly statement covering rent collected, CAM spend, vendor payments and maintenance carried out." }
         ],
         whatsappMessage: "Hi Hyderabad Properties Management, I have a commercial space in Hyderabad requiring professional management."
       }}

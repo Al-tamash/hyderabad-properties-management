@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Villa & Farmhouse Caretaking in Hyderabad | ${siteConfig.brand.name}`,
-    description: "Premium estate caretaking and maintenance for villas and farmhouses in Hyderabad. Weekend arrival preparation and weekly video updates.",
+    description: "Caretaking and maintenance for villas and farmhouses in Hyderabad. Scheduled visits, garden and pool care, security checks and video updates.",
     url: `${siteConfig.brand.url}/services/villa-farmhouse`,
     siteName: siteConfig.brand.name,
     locale: "en_IN",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Villa & Farmhouse Caretaking in Hyderabad | ${siteConfig.brand.name}`,
-    description: "Premium estate caretaking and maintenance for villas and farmhouses in Hyderabad. Weekend arrival preparation and weekly video updates.",
+    description: "Caretaking and maintenance for villas and farmhouses in Hyderabad. Scheduled visits, garden and pool care, security checks and video updates.",
     images: [`${siteConfig.brand.url}/images/villa.jpg`],
   },
 };
@@ -39,13 +39,13 @@ export default function VillaFarmhouseManagementPage() {
       data={{
         id: "villa",
         title: "Villa & Farmhouse Management",
-        heroDescription: "Discreet, premium caretaking for luxury retreats, weekend farmhouses, and high-value estates.",
+        heroDescription: "Caretaking for villas and farmhouses that sit empty between visits — cleaning, garden, pool and security.",
         heroImage: "/images/villa.jpg",
-        overviewHeading: "Premium Care for Luxury Estates",
+        overviewHeading: "Care for Homes That Sit Empty",
         overviewDescription: [
-          "Luxury villas and farmhouses require consistent upkeep to prevent degradation, even when unoccupied. Our premium caretaking service ensures your estate is always in pristine condition.",
-          "We coordinate deep cleaning, landscaping, swimming pool maintenance, and 24/7 security. For weekend retreats, we prepare the property ahead of your arrival so you can simply walk in and relax.",
-          "Trust Hyderabad Properties Management to preserve the beauty, functionality, and security of your highest-value residential assets."
+          "A villa that is closed up for weeks starts to show it: dust, damp, an overgrown garden, a pool gone green.",
+          "We arrange deep cleaning, garden work, pool servicing and security, and we check the house between visits. If you are coming for the weekend, we open it up and have it ready before you arrive.",
+          "You get a regular video walkthrough, so you can see the house rather than take our word for it."
         ],
         overviewImage: "/images/villa.jpg",
         keyInclusions: [
@@ -60,26 +60,27 @@ export default function VillaFarmhouseManagementPage() {
           "Photo/video updates"
         ],
         whatWeHandle: [
-          { title: "Regular Inspections", desc: "Routine checks to ensure security and prevent damage.", icon: <Home /> },
-          { title: "Pool Upkeep", desc: "Chemical balancing, cleaning, and pump maintenance.", icon: <Droplets /> },
-          { title: "Landscaping", desc: "Lawn mowing, pruning, and garden care.", icon: <Leaf /> },
-          { title: "Security", desc: "Vigilance and guard coordination for remote farmhouses.", icon: <Shield /> },
-          { title: "Repairs", desc: "Prompt fixing of structural, plumbing, or electrical issues.", icon: <Wrench /> },
-          { title: "Weekend Prep", desc: "Cleaning and stocking before the owner's arrival.", icon: <Calendar /> }
+          { title: "Regular Inspections", desc: "Scheduled visits to check security and catch damage early.", icon: <Home /> },
+          { title: "Pool Upkeep", desc: "Chemical balancing, cleaning and pump maintenance.", icon: <Droplets /> },
+          { title: "Landscaping", desc: "Lawn mowing, pruning and garden care.", icon: <Leaf /> },
+          { title: "Security", desc: "Guard coordination for farmhouses away from the city.", icon: <Shield /> },
+          { title: "Repairs", desc: "Fixing structural, plumbing or electrical problems.", icon: <Wrench /> },
+          { title: "Weekend Prep", desc: "Cleaning and stocking before you arrive.", icon: <Calendar /> }
         ],
         howItWorks: [
-          { step: 1, title: "Estate Audit", desc: "Detailed mapping of the property's needs." },
-          { step: 2, title: "Caretaker Assign", desc: "Deploying trusted staff for regular upkeep." },
-          { step: 3, title: "Schedule Setup", desc: "Defining cleaning and gardening routines." },
+          { step: 1, title: "Estate Audit", desc: "A full assessment of the property and what it needs." },
+          { step: 2, title: "Caretaker Assign", desc: "Assigning staff for regular upkeep." },
+          { step: 3, title: "Schedule Setup", desc: "Setting cleaning and gardening routines." },
           { step: 4, title: "Monitoring", desc: "Weekly checks and utility payments." },
-          { step: 5, title: "Visit Prep", desc: "Readying the estate before you arrive." },
-          { step: 6, title: "Reporting", desc: "Monthly photo and video condition logs." }
+          { step: 5, title: "Visit Prep", desc: "Getting the house ready before you arrive." },
+          { step: 6, title: "Reporting", desc: "Photo and video logs each month." }
         ],
         gallery: [
+          "/images/portfolio/villa-farmhouse-lawn-sunset-hyderabad.jpg",
+          "/images/portfolio/duplex-villa-garden-hyderabad.jpg",
           "/images/villa.jpg",
           "/images/villa_garden.jpg",
           "/images/inspection.jpg",
-          "/images/handshake.jpg",
           "/images/agreement.jpg"
         ],
         reviews: [
@@ -89,7 +90,7 @@ export default function VillaFarmhouseManagementPage() {
             location: "Farmhouse Owner, Shankarpally"
           },
           {
-            quote: "The landscaping and pool are flawlessly maintained. Hyderabad Properties Management provides true luxury caretaking.",
+            quote: "The garden and pool are always in good shape, and the house is ready by the time we get there.",
             name: "Priya T.",
             location: "Villa Owner, Tellapur"
           },
@@ -100,12 +101,12 @@ export default function VillaFarmhouseManagementPage() {
           }
         ],
         faq: [
-          { question: "How often do you inspect the villa/farmhouse?", answer: "We conduct weekly comprehensive inspections, and daily checks if full-time staff are deployed." },
-          { question: "Do you handle swimming pool maintenance?", answer: "Yes, we coordinate with specialized vendors for regular cleaning, chlorination, and pump checks." },
-          { question: "Can you prepare the house for our weekend visit?", answer: "Absolutely. We offer 'Weekend Prep' which includes deep cleaning, airing out the property, and turning on utilities." },
-          { question: "Do you manage the garden and lawn?", answer: "Yes, we coordinate professional landscaping to keep your lawns, plants, and trees healthy." },
-          { question: "How is security handled for remote farmhouses?", answer: "We can coordinate 24/7 manned security guards and ensure proper boundary lighting and CCTV function." },
-          { question: "Will I get visual proof of the property's condition?", answer: "Yes, we send detailed photo and video reports regularly." }
+          { question: "How often do you inspect the villa/farmhouse?", answer: "Weekly as standard, and daily if full-time staff are posted at the property." },
+          { question: "Do you handle swimming pool maintenance?", answer: "Yes. We coordinate vendors for cleaning, chlorination and pump checks." },
+          { question: "Can you prepare the house for our weekend visit?", answer: "Yes. Weekend Prep includes deep cleaning, airing the house out and switching the utilities on." },
+          { question: "Do you manage the garden and lawn?", answer: "Yes. We arrange landscaping to keep the lawn, plants and trees healthy." },
+          { question: "How is security handled for remote farmhouses?", answer: "We can arrange manned guards, and we check that boundary lighting and CCTV are working." },
+          { question: "Will I get visual proof of the property's condition?", answer: "Yes. Photo and video reports are sent after each round of checks." }
         ],
         whatsappMessage: "Hi Hyderabad Properties Management, I want to discuss caretaking & upkeep for my Villa/Farmhouse."
       }}

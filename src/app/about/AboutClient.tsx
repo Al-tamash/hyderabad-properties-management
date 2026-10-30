@@ -53,7 +53,7 @@ export default function AboutPage() {
               <div className="text-[var(--color-accent-strong)] font-semibold uppercase tracking-wider text-sm mb-2">{siteConfig.brand.name}</div>
               <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[var(--color-primary)] leading-[1.2]">A team you can actually trust with your keys.</h2>
               <p className="text-[var(--color-muted)] mb-8 leading-relaxed">
-                We&apos;re a dedicated property management team based right here in Hyderabad. Whether you own a family home, a commercial space, or a vacant plot, we treat your property like it&apos;s our own-handling all the everyday headaches so you don&apos;t have to.
+                We&apos;re a dedicated property management team based right here in Hyderabad. Whether you own a family home, a commercial space, or a vacant plot, we treat your property like it&apos;s our own &mdash; handling all the everyday headaches so you don&apos;t have to.
               </p>
               
               {/* Stats Grid */}
@@ -118,7 +118,7 @@ export default function AboutPage() {
               
               <div className="pt-8 border-t border-[var(--color-divider)]">
                 <p className="text-lg text-[var(--color-muted)] leading-relaxed font-light">
-                  {siteConfig.brand.name} provides end-to-end property care, ensuring your residential and commercial assets in Hyderabad are perfectly maintained and highly profitable. From sourcing verified tenants and executing secure rental agreements, to performing regular inspections and prompt maintenance—we handle all the daily operations so you can enjoy your returns with absolute peace of mind.
+                  {siteConfig.brand.name} looks after flats, apartments, villas, farmhouses, plots and commercial property across Hyderabad. We find and verify tenants, handle the rental agreement, inspect the property, and get repairs done — so you get the rent without the phone calls.
                 </p>
               </div>
             </div>
@@ -221,7 +221,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[var(--color-primary)] mb-2 text-lg">Tenant KYC & Verification</h3>
-                    <p className="text-sm text-[var(--color-muted)] leading-relaxed">Strict background checks to ensure reliable occupancy and legal compliance for complete peace of mind.</p>
+                    <p className="text-sm text-[var(--color-muted)] leading-relaxed">Police and employment checks before a tenant moves in, and the paperwork kept in order.</p>
                   </div>
                 </div>
 
@@ -232,7 +232,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[var(--color-primary)] mb-2 text-lg">Photo-Verified Maintenance</h3>
-                    <p className="text-sm text-[var(--color-muted)] leading-relaxed">Visual proof of work done before any vendor payment, ensuring high standards and absolute transparency.</p>
+                    <p className="text-sm text-[var(--color-muted)] leading-relaxed">Photos of the work before any vendor is paid, so you can see what you are paying for.</p>
                   </div>
                 </div>
               </div>
@@ -247,7 +247,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-[var(--color-accent)]">Your Property. Our Responsibility.</h2>
           <p className="text-xl text-gray-300 leading-relaxed mb-12">
-            {siteConfig.brand.name} acts as a dedicated property custodian and coordinates property-related activities with the owner&apos;s interests entirely in mind.
+            {siteConfig.brand.name} manages the property on your behalf and makes day-to-day decisions with your interests in mind.
           </p>
           <div className="bg-white/10 p-10 rounded-2xl border border-white/20 inline-block text-left max-w-2xl">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
@@ -368,6 +368,9 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center text-[var(--color-primary)]">Property Care in Action</h2>
           <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {[
+              "/images/portfolio/apartment-building-facade-hyderabad.jpg",
+              "/images/portfolio/villa-farmhouse-lawn-sunset-hyderabad.jpg",
+              "/images/portfolio/barka-plaza-commercial-complex-hyderabad.jpg",
               "/images/flat.jpg", 
               "/images/villa.jpg", 
               "/images/commercial.jpg",
@@ -417,31 +420,31 @@ export default function AboutPage() {
             {[
               {
                 q: `What does ${siteConfig.brand.name} do?`,
-                a: "We provide comprehensive property management services, coordinating tenants, maintenance, and asset care for owners in Hyderabad."
+                a: "We look after flats, apartments, villas, farmhouses, open plots and commercial properties for owners in Hyderabad."
               },
               {
                 q: "Which types of properties do you manage?",
-                a: "We manage flats, apartments, villas, farmhouses, open plots, and commercial properties."
+                a: "Flats, apartments, villas, farmhouses, open plots and commercial properties."
               },
               {
                 q: "Do you manage properties for owners living outside Hyderabad?",
-                a: "Yes, our services are specially designed to give peace of mind to NRI and distant owners who cannot physically visit their property."
+                a: "Yes. Much of our work is for NRI owners who cannot visit the property themselves."
               },
               {
                 q: "Do you handle tenant coordination?",
-                a: "Yes, we handle everything from finding tenants and KYC verification to rent collection and issue mediation."
+                a: "Yes. Finding tenants, KYC checks, rent collection and sorting out day-to-day issues all sit with us."
               },
               {
                 q: "How do property inspections work?",
-                a: "We schedule regular physical visits to assess condition, identify repair needs, and ensure the property is secure."
+                a: "We visit on a schedule, check the condition of the property, note anything that needs repair, and confirm it is secure."
               },
               {
                 q: "Will I receive updates about my property?",
-                a: "Absolutely. We provide regular reports and prompt photo/video updates for any maintenance work or issues."
+                a: "Yes. You get regular reports, and photos or video whenever work is done."
               },
               {
                 q: "How are maintenance requests handled?",
-                a: "We coordinate with trusted local vendors to acquire quotes, seek your approval, execute the repairs, and provide visual proof upon completion."
+                a: "We get quotes from local vendors, send them to you for approval, get the work done, and send photos when it is finished."
               },
               {
                 q: "How can I get started?",
@@ -509,7 +512,7 @@ export default function AboutPage() {
                 Your Property Deserves Professional Care
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed font-medium">
-                Whether you own a rental flat, apartment, villa, farmhouse, plot or commercial property in Hyderabad, {siteConfig.brand.name} can help you manage it with greater confidence and transparency.
+                Whether you own a rental flat, apartment, villa, farmhouse, plot or commercial property in Hyderabad, {siteConfig.brand.name} can take the day-to-day work off your hands.
               </p>
             </div>
 

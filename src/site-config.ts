@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
   brand: {
     name: "Hyderabad Properties Management",
     tagline: "Property Management Hyderabad",
-    description: "Hyderabad Properties Management provides professional property management, absolute transparency, strict tenant KYC, and photo-verified repair estimates for assets in Hyderabad.",
+    description: "Hyderabad Properties Management looks after flats, apartments, villas and commercial property in Hyderabad, with verified tenants, photo-verified repairs and clear monthly reports.",
     foundedYear: 2009,
     city: "Hyderabad, Telangana",
     url: "https://www.hyderabadpropertiesmanagement.com",

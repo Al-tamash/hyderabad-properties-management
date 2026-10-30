@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/site-config";
@@ -15,7 +15,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 const HOME_TITLE = `${siteConfig.brand.name} | Trusted Property Care`;
 const HOME_DESCRIPTION =
-  "End-to-end property management in Hyderabad for flats, apartments, villas, plots and commercial assets. Verified tenants and photo-verified repair reports.";
+  "Property management in Hyderabad for flats, apartments, villas, plots and commercial property. Verified tenants and photo-verified repair reports.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.brand.url),
@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   description: HOME_DESCRIPTION,
   alternates: {
     canonical: siteConfig.brand.url,
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48", type: "image/x-icon" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   robots: {
     index: true,
@@ -63,6 +71,10 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0f172a",
 };
 
 const jsonLd = {

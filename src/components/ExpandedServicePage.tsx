@@ -196,7 +196,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
           <div className="text-center mb-16 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 font-serif mb-4">How It Works</h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              We follow a streamlined, transparent process to ensure your property is managed efficiently and your returns are maximized without the daily hassle.
+              Six steps, from the first inspection to the monthly report. No surprises in between.
             </p>
           </div>
 
@@ -281,7 +281,7 @@ export function ExpandedServicePage({ data }: { data: ServiceData }) {
                 Your Property Deserves<br/>Professional Care
               </h2>
               <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl">
-                Whether you own a rental flat, apartment, villa, farmhouse, plot or commercial property in Hyderabad, {siteConfig.brand.name} can help you manage it with greater confidence and transparency.
+                Whether you own a rental flat, apartment, villa, farmhouse, plot or commercial property in Hyderabad, {siteConfig.brand.name} can take the day-to-day work off your hands.
               </p>
             </div>
 

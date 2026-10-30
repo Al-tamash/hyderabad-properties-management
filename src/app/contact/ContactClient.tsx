@@ -120,7 +120,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="max-w-2xl text-gray-200 mb-6 px-4">
-            Get in touch with our team to discuss how we can help manage and protect your valuable assets in Hyderabad.
+            Talk to us about your property in Hyderabad — what you need, what it costs, and how we would handle it.
           </p>
           <nav aria-label="Breadcrumb" className="text-[var(--color-accent)] font-semibold flex items-center gap-2 text-sm tracking-widest uppercase">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                 <div className="text-[var(--color-accent-strong)] font-semibold uppercase tracking-wider text-sm mb-2">Get in touch</div>
                 <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[var(--color-primary)] leading-[1.2]">We are here to help you</h2>
                 <p className="text-[var(--color-muted)] leading-relaxed mb-8">
-                  Whether you have a question about our services, pricing, or need immediate assistance with your property, our dedicated team is ready to answer all your questions.
+                  Questions about our services, pricing, or a problem at your property? Call, message us on WhatsApp, or send the form below. We will get back to you as soon as we can.
                 </p>
               </div>
 
@@ -167,7 +167,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-[var(--color-primary)] text-lg mb-1">WhatsApp</h3>
                     <a
                       href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
-                        `Hi ${siteConfig.brand.name}, I would like to inquire about your property management services.`
+                        `Hi ${siteConfig.brand.name}, I would like to enquire about your property management services.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
