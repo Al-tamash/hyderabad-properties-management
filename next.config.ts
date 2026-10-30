@@ -13,7 +13,7 @@ const contentSecurityPolicy = [
   "img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com",
   "font-src 'self' data:",
   "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
-  "frame-src https://www.google.com https://maps.google.com",
+  "frame-src 'self' https://www.google.com https://maps.google.com",
   "worker-src 'self' blob:",
   "upgrade-insecure-requests",
 ].join("; ");
