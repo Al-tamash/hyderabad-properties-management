@@ -5,7 +5,6 @@ import { siteConfig } from "@/site-config";
 const linkClass = "inline-block py-1 hover:text-white transition-colors";
 
 async function CopyrightYear() {
-  "use cache";
   return new Date().getFullYear();
 }
 
